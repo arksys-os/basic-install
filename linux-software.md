@@ -85,14 +85,10 @@
 - Web-browser: chromium ungoogled-chromium firefox librewolf opera vivaldi
 
 ## Not on Linux, use with WINE or Bottles
-- Adobe Acrobat
-- Adobe Photoshop
-- Affinity Photo
+- Adobe suite
+- Affinity suite
 - AutoDesk
-- JPEGView64
 - Microsoft Office
-- MusicBee
-
 
 ## References
 - [List of apps | Arch Linux Wiki](https://wiki.archlinux.org/title/List_of_applications)

@@ -31,7 +31,7 @@ You can also use archinstall with preconfigured options stored in local or remot
 ```sh
 sudo pacman -S git
 git clone https://github.com/arksys-os/arksys-basic-install.git
-sh ./installation/archinstall-config.sh
+cd ~/arksys-basic-install/installation/archinstall && sh archinstall-config.sh
 ```
 
 > Similarly, you can use [ArcoLinux-D (Decision)](https://ftp.belnet.be/arcolinux/iso/v23.01.03/arcolinuxd-v23.01.03-x86_64.iso) an Arch-based distro where you can decide what packages to install with a GUI [calamares installer](https://calamares.io/) from XFCE as the live Desktop Environment.
@@ -39,16 +39,16 @@ sh ./installation/archinstall-config.sh
 ### 1.A.B. Expert mode: Arch way
 - Install Arch Linux manually typing commands following the [Arch Wiki](https://wiki.archlinux.org/title/Installation_guide). You have to make pre-installation (internet connection, partition  and mount disks), install essential packages, configure system (fstam, chroot, timezone, localizaion, network, intramfs, root password) and reboot.
 
-### 1.A.C. Pro mode: Create and execute your own script
+### 1.A.C. Pro mode: create script installation
 > **Warning** Modify the script installation [arksys-installation.sh](installation/archinstall/archisntall-config.sh) and execute with your consent. (Send feedback if you know how to improve it)
 
 - Download the script and execute it, to download it you can use curl or git and for executing use bash: 
 ```sh
-# curl -sL raw.githubusercontent.com/david7ce/arksys/master/scripts/arksys-installation.sh | bash
+# curl -sL raw.githubusercontent.com/arksys-os/arksys-basic-install/main/installation/script/arksys.sh | bash
 
 # sudo pacman -S git
 # git clone https://github.com/arksys-os/arksys-basic-installation.git
-# cd ~/arksys/installation/basic/ && sh arksys.sh
+# cd ~/arksys-basic-installation/installation/script/ && sh arksys.sh
 ```
 
 ## 1.B. Install Arch Linux with KDE
