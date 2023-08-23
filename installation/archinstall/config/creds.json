@@ -2,7 +2,7 @@
 	"!root-password": "123",
 	"!users": [
 		{
-			"username": "d7",
+			"username": "ark",
 			"!password": "123",
 			"sudo": true
 		}

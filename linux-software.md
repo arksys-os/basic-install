@@ -8,7 +8,7 @@
 - Display-server: wayland xorg
 - Window-manager:
 	- Floating-window-manager: budgie cinnamon cutefish cwm deepin dusk fvwm3 icewm leftwm kwin jwm openbox 
-	- TIling-window-manager: awesomewm bspwm dwm herbstlufwm hyprland qtile spectrwm sway wmdrland xmonad
+	- Tiling-window-manager: awesomewm bspwm dwm herbstlufwm hyprland qtile spectrwm sway wmdrland xmonad
 
 ## Drivers
 - Audio-drivers: pipewire pulseaudio kpipewire helvum jack
@@ -84,11 +84,26 @@
 - Virtual-machine: virtualbox virt-manager vmware
 - Web-browser: chromium ungoogled-chromium firefox librewolf opera vivaldi
 
-## Not on Linux, use with WINE or Bottles
-- Adobe suite
+## Apps not develop for Linux
+- Microsoft Office Suite
+- Adobe Creative Suite
 - Affinity suite
-- AutoDesk
-- Microsoft Office
+- Apple software (iTunes, Safari, Final Cut Pro, Logic Pro, iMovie, GarageBand, Pages, Numbers, Keynote, Xcode)
+- Autodesk software (AutoCAD, Inventor Professional, Revit MEP, 3ds Max, Maya, Alias AutoStudio, Moldflow, Robot Structural Analysis Professional, Navisworks)
+- Avid Technology (Pro Tools, Media Composer)
+- Corel Corporation (CorelDRAW, PaintShop Pro)
+- Dassault Systèmes (SolidWorks)
+- Games:
+	- Blizzard (World of Warcraft, Diablo series)
+	- Epic Games (Fortnite, Unreal Engine)
+	- Electronic Arts Sports (Madden NFL, FIFA series)
+	- RIOT (LOL, VALORANT, etc)
+
+## Ways to use apps from other OS (Windows, macOS) on Linux
+- Compatibility layer: WINE for Windows, Darling for macOS.
+  - Apps for manage WINE prefixes: Bottles, Lutris, Proton, Heroic Games Launcher
+- Containers: Docker or Podman
+- Virtual Machine: Qemu+virt-manager, Virtualbox
 
 ## References
 - [List of apps | Arch Linux Wiki](https://wiki.archlinux.org/title/List_of_applications)

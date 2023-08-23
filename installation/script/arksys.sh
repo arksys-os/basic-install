@@ -1,7 +1,8 @@
 #!/bin/bash
 # WARNING: this script will destroy data on the selected disk.
 # This script can be run by executing the following:
-#  curl -sL https://raw.githubusercontent.com/david7ce/arksys/master/arksys-installation.sh | bash
+# curl -sL https://raw.githubusercontent.com/arksys-os/arksys_basic-install/main/installation/script/arksys.sh | bash
+## curl -sL https://dub.sh/MpD1lZh | bash
 
 echo "arksys installation"
 
@@ -64,17 +65,18 @@ locale-gen
 
 # 3.3. Network configuration
 # 3.3.1. Hostname
-'d7' >> /etc/hostname
+'ark' >> /etc/hostname
 # 3.3.2. Hosts
 '127.0.0.1 localhost\n ::1 localhost\n 127.0.0.1 arksys.localdomain hostname' >> /etc/hosts
 
 # 3.3.3. Initramfs  mkinitcpio -P
 
 # 3.4. Set user
+$user = ark
 passwd
-useradd -m d7
-passwd d7 
-usermod -aG wheel,audio,video,optical,storage d7
+useradd -m ark
+passwd ark 
+usermod -aG wheel,audio,video,optical,storage ark
 pacman -S sudo
 # EDITOR=nvim visudo # Delete comment in line: %wheel ALL=(ALL:ALL) ALL
 

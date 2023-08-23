@@ -19,10 +19,10 @@ Depending of your needs you can install:
 - an Arch Linux system from scratch (1.A)
 - an Arch-based system preconfigured (1.B)
 
-## 1.A. Install Arch from scratch
-There are various options to install this configuration system inside Arch Linux:
+## 1.A. 🥚 Install Arch from scratch
+There are various options to install Arch Linux with this configuration system:
 
-### 1.A.A. Easy way: archinstall
+### 1.A.A. 🐍 Easy way: archinstall
 When you boot into Arch, you can run "archinstall" an installer with forms options. Watch this video installing Arch with archinstall in less than 5 mins:
 [![Watch the video](/img/archinstall-video.png)](https://www.youtube-nocookie.com/embed/8mEjwn_AjuQ?start=146)
  
@@ -36,22 +36,30 @@ cd ~/arksys-basic-install/installation/archinstall && sh archinstall-config.sh
 
 > Similarly, you can use [ArcoLinux-D (Decision)](https://ftp.belnet.be/arcolinux/iso/v23.01.03/arcolinuxd-v23.01.03-x86_64.iso) an Arch-based distro where you can decide what packages to install with a GUI [calamares installer](https://calamares.io/) from XFCE as the live Desktop Environment.
 
-### 1.A.B. Expert mode: Arch way
+### 1.A.B. 🐢 Expert mode: Arch in the shell
 - Install Arch Linux manually typing commands following the [Arch Wiki](https://wiki.archlinux.org/title/Installation_guide). You have to make pre-installation (internet connection, partition  and mount disks), install essential packages, configure system (fstam, chroot, timezone, localizaion, network, intramfs, root password) and reboot.
 
-### 1.A.C. Pro mode: create script installation
+### 1.A.C. 🐙 Pro mode: create script installation
 > **Warning** Modify the script installation [arksys-installation.sh](installation/archinstall/archisntall-config.sh) and execute with your consent. (Send feedback if you know how to improve it)
 
-- Download the script and execute it, to download it you can use curl or git and for executing use bash: 
+- Download the script (with git or curl) and execute it with bash:
+with curl:
 ```sh
-# curl -sL raw.githubusercontent.com/arksys-os/arksys-basic-install/main/installation/script/arksys.sh | bash
-
-# sudo pacman -S git
-# git clone https://github.com/arksys-os/arksys-basic-installation.git
-# cd ~/arksys-basic-installation/installation/script/ && sh arksys.sh
+curl -sL https://raw.githubusercontent.com/arksys-os/arksys_basic-install/main/installation/script/arksys.sh | bash
+```
+with git:
+```sh
+sudo pacman -S git
+git clone https://github.com/arksys-os/arksys-basic-installation.git
+cd ~/arksys-basic-installation/installation/script/ && sh arksys.sh
 ```
 
-## 1.B. Install Arch Linux with KDE
+### 1.A.D. 🐧 Distro mode: create your distro
+Create your own Linux distro with a framework installer, you need the to configure the archiso profile for Archlinux and also the calamares app + branding + modules. 
+
+## 1.B. 🐾 Install configured Arch Linux
+
+### Arch Linux with KDE
 If you don't want to configure Arch Linux, you can also install preconfigured Linux distributions in this case KDE. Here are the most relevant:
 
 - Arch-based with KDE: [ArcoLinux KDE](https://sourceforge.net/projects/arcolinux-community-editions/files/plasma/), [Garuda KDE Lite](https://iso.builds.garudalinux.org/iso/garuda/kde-lite/), [EndeavourOS KDE](https://endeavouros.com/latest-release/), [Manjaro KDE](https://download.manjaro.org/kde/22.0/manjaro-kde-22.0-221224-linux61.iso), [Xerolinux](https://sourceforge.net/projects/xerolinux/), [CachyOS KDE](https://mirror.cachyos.org/ISO/kde/), [Artix KDE](http://ftp.ntua.gr/pub/linux/artix-iso/?C=S;O=D)
@@ -65,6 +73,7 @@ If you don't want to configure Arch Linux, you can also install preconfigured Li
 
 - Other Linux distros with KDE: [Alt Workstation KDE](https://getalt.org/en/alt-kworkstation/), [KaOS - SourceForge](https://sourceforge.net/projects/kaosx/files/ISO/KaOS-2022.12-x86_64.iso/download), [Rosa Linux KDE](https://mirror.rosalinux.ru/rosa/rosa2021.1/iso/ROSA.FRESH.12/plasma5/)
 
+> Take in mind KDE is a desktop environment, you can choose others such as GNOME, XFCE, Deepin, etc or Window Managers (qtile, awesomeWM, hyprland) + essential packages.
 
 ## 2. [Post-installation](https://github.com/ArkSys-linux/arksys-post-install)
 
@@ -81,4 +90,3 @@ If you don't want to configure Arch Linux, you can also install preconfigured Li
 - [KDE - ArchWiki](https://wiki.archlinux.org/title/KDE)
 - [10 Ways KDE is just better - YouTube](https://www.youtube.com/watch?v=3nX1YEQg5Z0)
 - [Por estas 5 razones Arch Linux es simplemente MEJOR](https://www.youtube.com/watch?v=hk4t1RhnKVo)
-
