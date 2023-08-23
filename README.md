@@ -75,7 +75,7 @@ If you don't want to configure Arch Linux, you can also install preconfigured Li
 
 > Take in mind KDE is a desktop environment, you can choose others such as GNOME, XFCE, Deepin, etc or Window Managers (qtile, awesomeWM, hyprland) + essential packages.
 
-## 2. [Post-installation](https://github.com/ArkSys-linux/arksys-post-install)
+## 2. [Post-installation](https://github.com/ArkSys-linux/arksys_post-install)
 
 ---
 
