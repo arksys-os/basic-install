@@ -75,6 +75,7 @@ If you don't want to configure Arch Linux, you can also install preconfigured Li
 
 ## 2. [Post-installation](https://github.com/arksys-os/arksys_post-install)
 Go to the GitHub repo [ArkSys-OS/Post-installation](https://github.com/arksys-os/arksys_post-install).
+
 ---
 
 ## Resources
@@ -82,7 +83,7 @@ Go to the GitHub repo [ArkSys-OS/Post-installation](https://github.com/arksys-os
 - [Arch Linux installation guide](https://wiki.archlinux.org/title/Installation_guide)
 - [Archinstall - man page](https://man.archlinux.org/man/extra/archinstall/archinstall.1.en)
 - [Archinstall · GitHub](https://github.com/archlinux/archinstall)
-- [ALIS](https://github.com/picodotdev/alis/)
+- [ALIS · GitHub](https://github.com/picodotdev/alis/)
 - [Bootloader: GRUB](https://wiki.archlinux.org/title/GRUB)
 - [Distributions featuring KDE Plasma](https://community.kde.org/Distributions)
 - [KDE - ArchWiki](https://wiki.archlinux.org/title/KDE)
