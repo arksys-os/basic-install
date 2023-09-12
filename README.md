@@ -45,10 +45,10 @@ cd ~/arksys-basic-install/installation/archinstall && sh archinstall-config.sh
 - Download the script (with git or curl) and execute it with bash:
 with curl:
 ```sh
+# with curl
 curl -sL https://raw.githubusercontent.com/arksys-os/arksys_basic-install/main/installation/script/arksys.sh | bash
-```
-with git:
-```sh
+
+# with git
 sudo pacman -S git
 git clone https://github.com/arksys-os/arksys-basic-installation.git
 cd ~/arksys-basic-installation/installation/script/ && sh arksys.sh
@@ -57,7 +57,7 @@ cd ~/arksys-basic-installation/installation/script/ && sh arksys.sh
 ### 1.A.D. 🐧 + 🦑 Distro mode: Linux distro with calamares
 Create your own Linux distro with a framework installer like calamares installer. You need to configure the [archiso](https://wiki.archlinux.org/title/Archiso) profile (for Archlinux) or [Debian live-build](https://salsa.debian.org/live-team/live-build) and the [calamares installer](https://calamares.io/) with modules and branding. 
 
-## 1.B. 🐾 Install configured Arch Linux
+## 1.B. 🐧 + 🖥️ Configured Linux distro
 
 ### Arch Linux with KDE
 If you don't want to configure Arch Linux, you can also install preconfigured Linux distributions with a desktop environment like KDE. Here are the most relevant:
