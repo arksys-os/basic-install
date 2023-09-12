@@ -54,29 +54,27 @@ git clone https://github.com/arksys-os/arksys-basic-installation.git
 cd ~/arksys-basic-installation/installation/script/ && sh arksys.sh
 ```
 
-### 1.A.D. 🐧 Distro mode: create your distro
-Create your own Linux distro with a framework installer, you need the to configure the archiso profile for Archlinux and also the calamares app + branding + modules. 
+### 1.A.D. 🐧 + 🦑 Distro mode: Linux distro with calamares
+Create your own Linux distro with a framework installer like calamares installer. You need to configure the [archiso](https://wiki.archlinux.org/title/Archiso) profile (for Archlinux) or [Debian live-build](https://salsa.debian.org/live-team/live-build) and the [calamares installer](https://calamares.io/) with modules and branding. 
 
 ## 1.B. 🐾 Install configured Arch Linux
 
 ### Arch Linux with KDE
-If you don't want to configure Arch Linux, you can also install preconfigured Linux distributions in this case KDE. Here are the most relevant:
+If you don't want to configure Arch Linux, you can also install preconfigured Linux distributions with a desktop environment like KDE. Here are the most relevant:
 
 - Arch-based with KDE: [ArcoLinux KDE](https://sourceforge.net/projects/arcolinux-community-editions/files/plasma/), [Garuda KDE Lite](https://iso.builds.garudalinux.org/iso/garuda/kde-lite/), [EndeavourOS KDE](https://endeavouros.com/latest-release/), [Manjaro KDE](https://download.manjaro.org/kde/22.0/manjaro-kde-22.0-221224-linux61.iso), [Xerolinux](https://sourceforge.net/projects/xerolinux/), [CachyOS KDE](https://mirror.cachyos.org/ISO/kde/), [Artix KDE](http://ftp.ntua.gr/pub/linux/artix-iso/?C=S;O=D)
 
-> I recommend [ArkSys]https://github.com/arksys-os/arksys-iso) or [Garuda KDE Lite](https://iso.builds.garudalinux.org/iso/garuda/kde-lite/)
+> I recommend an Arch with basic KDE config like my distro [ArkSys]https://github.com/arksys-os/arksys-iso) or [Garuda KDE Lite](https://iso.builds.garudalinux.org/iso/garuda/kde-lite/)
 
 ### Other distros with KDE
 - Debian-based with KDE: [KDE Neon](https://neon.kde.org/), [Kubuntu](https://kubuntu.org/), [MX Linux KDE](https://sourceforge.net/projects/mx-linux/files/Final/KDE/), [Nitrux KDE](https://sourceforge.net/projects/nitruxos/files/Release/ISO/)
 
 - RPM-based with KDE: [Fedora KDE](https://ftp.plusline.net/fedora/linux/releases/37/Spins/x86_64/iso/), [Nobara Project (KDE)](https://nobara-images.nobaraproject.org/Nobara-37-Official-2023-04-02.iso), [openSUSE KDE](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso?mirrorlist)
 
-- Other Linux distros with KDE: [Alt Workstation KDE](https://getalt.org/en/alt-kworkstation/), [KaOS - SourceForge](https://sourceforge.net/projects/kaosx/files/ISO/KaOS-2022.12-x86_64.iso/download), [Rosa Linux KDE](https://mirror.rosalinux.ru/rosa/rosa2021.1/iso/ROSA.FRESH.12/plasma5/)
-
 > Take in mind KDE is a desktop environment, you can choose others such as GNOME, XFCE, Deepin, etc or Window Managers (qtile, awesomeWM, hyprland) + essential packages.
 
 ## 2. [Post-installation](https://github.com/arksys-os/arksys_post-install)
-
+Go to the GitHub repo [ArkSys-OS/Post-installation](https://github.com/arksys-os/arksys_post-install).
 ---
 
 ## Resources
