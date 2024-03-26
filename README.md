@@ -1,7 +1,7 @@
 # Basic installation
 
 To install a Linux distribution, you typically encounter the following components:
-- Linux kernel (🐧)
+- Linux kernel (6.8.1-arch1-1 or 5.17.12), the customized Linux kernel
 - Bootloader (GRUB, systemd)
 - Init system (systemd, sysvinit, runit, OpenRC)
 - File system (EXT4, BTRFS, ZFS)
@@ -11,15 +11,16 @@ To install a Linux distribution, you typically encounter the following component
 
 Example of Linux distros:
 
-| Distribución    | Linux kernel  | Bootloader      | Init system     | File system      | Display server | Package manager  | Desktop environment |
-|-----------------|---------------|-----------------|-----------------|------------------|----------------|------------------|---------------------|
-| Arch Linux      | 🐧            | GRUB, systemd   | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Pacman (PKGBUILD)| --                  |
-| Debian          | 🐧            | GRUB, systemd   | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Apt (.deb)       | --                  |
-| Fedora          | 🐧            | GRUB, systemd   | systemd         | EXT4, BTRFS      | Wayland        | DNF (.rpm)       | GNOME               |
-| NixOS           | 🐧            | systemd         | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Nix (.nar)       | -- / GNOME          |
-| Gentoo          | 🐧            | GRUB, systemd   | OpenRC, systemd | EXT4, BTRFS, ZFS | Xorg / Wayland | Portage (.ebuild)| --                  |
-| Void Linux      | 🐧            | GRUB            | runit           | EXT4, BTRFS      | Xorg / Wayland | xbps (.xbps)     | -- / XFCE           |
-| Ubuntu          | 🐧            | GRUB            | systemd         | EXT4             | Wayland        | Apt, snap (.snap)| GNOME               |
+| Distribución    | Linux kernel                   | Base system tools            | Bootloader      | Init system     | File system      | Display server | Package manager  | Desktop environment |
+|-----------------|--------------------------------|------------------------------|-----------------|-----------------|------------------|----------------|------------------|---------------------|
+| Arch Linux      | 6.8.1-arch1-1 (rolling-release)| archiso, base, base-devel    | GRUB, systemd   | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Pacman (PKGBUILD)| --                  |
+| Debian          | 5.17.12 (fixed-release)        | glibc                        | GRUB, systemd   | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Apt (.deb)       | --                  |
+| Fedora          | 5.19.12-200 (fixed-release)    | glibc                        | GRUB, systemd   | systemd         | EXT4, BTRFS      | Wayland        | DNF (.rpm)       | GNOME               |
+| NixOS           | 5.17.12 (rolling-release)      | glibc                        | systemd         | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Nix (.nar)       | -- / GNOME          |
+| Gentoo          | 5.17.12 (rolling-release)      | glibc                        | GRUB, systemd   | OpenRC, systemd | EXT4, BTRFS, ZFS | Xorg / Wayland | Portage (.ebuild)| --                  |
+| Void Linux      | 6.3.12_1 (rolling-release)     | musl                         | GRUB            | runit           | EXT4, BTRFS      | Xorg / Wayland | xbps (.xbps)     | -- / XFCE           |
+| Ubuntu          | 5.17.12 (fixed-release)        | glibc                        | GRUB            | systemd         | EXT4             | Wayland        | Apt, snap (.snap)| GNOME               |
+
 
 ## 0. Prerequisites
 First you need to download the [ISO image](https://en.wikipedia.org/wiki/Optical_disc_image) of the Linux distribution that you want to install and write it to an optical medium like CD, DVD, pen-drive, HDD. 
