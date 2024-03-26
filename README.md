@@ -11,7 +11,7 @@ To install a Linux distribution, you typically encounter the following component
 
 Example of Linux distros:
 
-| Distribución    | Linux kernel                   | Base system tools            | Bootloader      | Init system     | File system      | Display server | Package manager  | Desktop environment |
+| Linux distro    | Linux kernel                   | Base system tools            | Bootloader      | Init system     | File system      | Display server | Package manager  | Desktop environment |
 |-----------------|--------------------------------|------------------------------|-----------------|-----------------|------------------|----------------|------------------|---------------------|
 | Arch Linux      | 6.8.1-arch1-1 (rolling-release)| archiso, base, base-devel    | GRUB, systemd   | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Pacman (PKGBUILD)| --                  |
 | Debian          | 5.17.12 (fixed-release)        | glibc                        | GRUB, systemd   | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Apt (.deb)       | --                  |
