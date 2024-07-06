@@ -85,7 +85,6 @@
 - Web-browser: chromium ungoogled-chromium firefox librewolf opera vivaldi
 
 ## Apps not develop for Linux
-- Microsoft Office Suite
 - Adobe Creative Suite
 - Affinity suite
 - Apple software (iTunes, Safari, Final Cut Pro, Logic Pro, iMovie, GarageBand, Pages, Numbers, Keynote, Xcode)
@@ -93,6 +92,7 @@
 - Avid Technology (Pro Tools, Media Composer)
 - Corel Corporation (CorelDRAW, PaintShop Pro)
 - Dassault Systèmes (SolidWorks)
+- Microsoft Office Suite
 - Games:
 	- Blizzard (World of Warcraft, Diablo series)
 	- Epic Games (Fortnite, Unreal Engine)
