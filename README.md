@@ -1,7 +1,7 @@
 # Basic installation
 
 To install a Linux distribution, you typically encounter the following components:
-- Linux kernel (6.8.1-arch1-1 or 5.17.12), the customized Linux kernel
+- Linux kernel
 - Bootloader (GRUB, systemd)
 - Init system (systemd, sysvinit, runit, OpenRC)
 - File system (EXT4, BTRFS, ZFS)
@@ -58,20 +58,17 @@ Typically you need to do pre-installation (internet connection, partition and mo
 
 To automate the installation process we can create an use scripts on the terminal using BASH. 
 
-- You can use scripts created by the community like **archinstall** a script installer for Arch Linux with selection options in a formulary. Watch this video installing Arch in less than 5 mins:
-[![Watch the video](/img/archinstall-video.png)](https://www.youtube-nocookie.com/embed/8mEjwn_AjuQ?start=146)
- 
-You can specify preconfigured options stored in a json to the archinstall command, `archinstall --config <path-to-json> --disk-layout <path-to-json> --creds <path-to-json>'. Example to install Arch with KDE, ext4 file system and extra pks.
+- You can use scripts like **archinstall** a library which can be used to install Arch Linux selecting options in a formulary. Also you can create profiles stored in a json and pass it to the archinstall command, `archinstall --config <path-to-json> --disk-layout <path-to-json> --creds <path-to-json>'. [Video installing Arch in 7 mins](https://www.youtube.com/watch?v=V8eBZQ8F1HE)
 
-Install locally with git:
 ```sh
+# Example to install Arch with KDE, ext4 file system and extra pks.
+
+# Install locally with git:
 sudo pacman -S git
 git clone https://github.com/arksys-os/arksys-basic-install.git
 cd ~/arksys-basic-install/installation/archinstall && sh archinstall-config.sh
-```
 
-Install remottely with curl:
-```sh
+# Install remottely with curl:
 curl -sL https://raw.githubusercontent.com/arksys-os/arksys_basic-install/main/installation/script/arksys.sh | bash
 ```
 
