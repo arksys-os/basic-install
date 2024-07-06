@@ -58,7 +58,7 @@ Typically you need to do pre-installation (internet connection, partition and mo
 
 To automate the installation process we can create an use scripts on the terminal using BASH. 
 
-- You can use scripts like **archinstall** a library which can be used to install Arch Linux selecting options in a formulary. Also you can create profiles stored in a json and pass it to the archinstall command, `archinstall --config <path-to-json> --disk-layout <path-to-json> --creds <path-to-json>'. [Video installing Arch in 7 mins](https://www.youtube.com/watch?v=V8eBZQ8F1HE)
+- You can use scripts like **archinstall** a library which can be used to install Arch Linux selecting options in a formulary. Also you can create profiles stored in a json and pass it to the archinstall command, `archinstall --config <path-to-json> --disk-layout <path-to-json> --creds <path-to-json>`. [Video installing Arch in 7 mins](https://www.youtube.com/watch?v=V8eBZQ8F1HE)
 
 ```sh
 # Example to install Arch with KDE, ext4 file system and extra pks.
