@@ -25,31 +25,31 @@ Here's an improved and more detailed version of the table with added information
 | Ubuntu          | linux + glibc                     | GRUB                | systemd         | EXT4             | Wayland        | apt, snap (.snap)| GNOME            | Ubiquity GUI                              |
 
 ## 0. Prerequisites
-First you need to download the [ISO image](https://en.wikipedia.org/wiki/Optical_disc_image) of the Linux distribution that you want to install and write it to an optical medium like CD, DVD, pen-drive, HDD. 
+First you need to download the [ISO image](https://en.wikipedia.org/wiki/Optical_disc_image) of the Linux distribution that you want to install and write it to an optical medium like CD, DVD, pen-drive, HDD. Basically copy the ISO files into a hardare medium.
 
 - For disks just burn the ISO image into the CD / DVD / Blue-Ray with any [disk burning application](https://alternativeto.net/software/imgburn/).
-- For USB drives (typical nowadays) you can use 'dd' a CLI utility on Unix to copy the ISO files into the USB drive. Or use GUI apps like [Ventoy](https://www.ventoy.net/en/index.html) that permit to have multiple ISO images on a single device and select the image to boot from a display menu, [BalenaEtcher](https://www.balena.io/etcher) (multiplatform) and [Rufus](https://rufus.ie/en/) (for Windows) programs that extract the ISO images to the USB drive.
+- For USB drives you can use the command 'dd' on UNIX terminal or GUI apps like [Ventoy](https://www.ventoy.net/en/index.html), [BalenaEtcher](https://www.balena.io/etcher) (multiplatform), [Rufus](https://rufus.ie/en/) (for Windows).
 
-These are the commands for using `dd`:
+These are the steps for using `dd` on UNIX terminals:
 ```sh
 sudo fdisk –l         # find the disk to create the bootable system
-umount /dev/sdb*      # unmount the disk
-mkfs.vfat /dev/sdb –I
-dd if=~/Downloads/arch.iso of=/dev/sdb bs=4M status=progress
+umount /dev/sdb*      # unmount the disk X
+mkfs.vfat /dev/sdb –I # format the disk X with the file system specified
+dd if=~/Downloads/arch.iso of=/dev/sdb bs=4M status=progress # copy the ISO files
 ```
 
 ## 1. Options to install Linux
-- 1.A. Install configured Linux distro (presaved config files) -> 🐧 💾
-- 1.B. Install Linux fromt the terminal (typping on the shell) -> 🐧 🐢
-- 1.C. Create your own Linux distro (base profile + installer) -> 🐧 🛠️
 
-### 1.A. Install base distro with KDE
+### 1.A. Install base distro with configured desktop 🐧 💾
+
+Here's an example of the major Linux distro with KDE.
 
 - Arch-based with KDE:  [Garuda KDE Lite](https://iso.builds.garudalinux.org/iso/garuda/kde-lite/), [EndeavourOS](https://endeavouros.com/), [CachyOS KDE](https://mirror.cachyos.org/ISO/kde/), [ArcoLinux KDE](https://sourceforge.net/projects/arconetpro/files/arcoplasma/)
 - Debian-based with KDE: [KDE Neon](https://neon.kde.org/), [Kubuntu](https://kubuntu.org/getkubuntu/)
 - RPM-based with KDE: [Fedora KDE](https://ftp.plusline.net/fedora/linux/releases/39/Spins/x86_64/iso/Fedora-KDE-Live-x86_64-39-1.5.iso), [Nobara](https://nobara-images.nobaraproject.org/Nobara-39-Official-2024-01-24.iso), [openSUSE KDE](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-KDE-Live-x86_64-Current.iso)
+- [NixOS KDE](https://channels.nixos.org/nixos-24.05/latest-nixos-plasma6-x86_64-linux.iso)
 
-### 1.B. Installation from terminal
+### 1.B. Installation from terminal 🐧 🐢
 Normally Linux is intalled via terminal typing and executing commands. Is the simplest ways to develop, but the most time consuming to the user.
 
 Here are some examples of the installation guide of some Linux distro: [installation guide of the Arch Wiki](https://wiki.archlinux.org/title/Installation_guide), [installation guide of Gentoo wiki](https://wiki.gentoo.org/wiki/Installation), [installation guide of the NixOS wiki](https://nixos.wiki/wiki/NixOS_Installation_Guide)
@@ -77,7 +77,7 @@ curl -sL https://raw.githubusercontent.com/arksys-os/arksys_basic-install/main/i
 
 - Or you can create you own scripts. Here's an example I've made to install automatize the Arch Linux installation, check [arksys.sh](installation/script/arksys.sh)
 
-### C. Distro mode: Create you own Linux distro
+### C. Distro mode: Create you own Linux distro 🐧 🛠️
 Create your own Linux distro with a framework installer. You need to configure the base profile for Arch Linux ([archiso](https://wiki.archlinux.org/title/Archiso) profile), for Debian with [Debian live-build](https://salsa.debian.org/live-team/live-build) and configure a graphical installer like [calamares installer](https://calamares.io/). 
 
 ## 2. [Post-installation](https://github.com/arksys-os/arksys_post-install)
