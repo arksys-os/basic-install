@@ -1,10 +1,10 @@
 {
-	"!root-password": "123",
-	"!users": [
-		{
-			"username": "ark",
-			"!password": "123",
-			"sudo": true
-		}
-	]
+    "!root-password": "123",
+    "!users": [
+        {
+            "!password": "123",
+            "sudo": true,
+            "username": "ark"
+        }
+    ]
 }

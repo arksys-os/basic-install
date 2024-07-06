@@ -3,50 +3,170 @@
         "multilib"
     ],
     "archinstall-language": "English",
-    "audio": "pipewire",
-    "bootloader": "grub-install",
-    "desktop-environment": "kde",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Systemd-boot",
+    "config_version": "2.8.1",
     "debug": false,
-    "desktop-enivronment": "kde",
-    "gfx_driver": "Nvidia (open-source nouveau driver)",
-    "harddrives": [
-        "/dev/sda"
-    ],
+    "disk_config": {
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/nvme0n1",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "Boot",
+                            "ESP"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "938d573c-2d97-4038-aad3-94ea48baed01",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "mount_options": [],
+                        "mountpoint": "/",
+                        "obj_id": "373ee0c7-5ef0-4b90-996e-e2ec3a6fc7b5",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 50
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "mount_options": [],
+                        "mountpoint": "/home",
+                        "obj_id": "04d22ab5-60bd-4a23-85bf-736817cb1f49",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 945441955840
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 54761881600
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
     "hostname": "arksys",
     "kernels": [
         "linux"
     ],
-    "keyboard-layout": "es",
-    "mirror-region": {},
-    "nic": {
-        "dhcp": true,
-        "dns": null,
-        "iface": null,
-        "ip": null,
-        "type": "nm",
-        "NetworkManager": true,
-        "nic": "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE)"
+    "locale_config": {
+        "kb_layout": "es",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US"
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "Germany": [
+                "https://pkg.fef.moe/archlinux/$repo/os/$arch",
+                "https://packages.oth-regensburg.de/archlinux/$repo/os/$arch",
+                "https://os.codefionn.eu/archlinux/$repo/os/$arch",
+                "https://mirrors.xtom.de/archlinux/$repo/os/$arch",
+                "https://mirrors.niyawe.de/archlinux/$repo/os/$arch",
+                "https://mirrors.n-ix.net/archlinux/$repo/os/$arch",
+                "https://mirror.wtnet.de/archlinux/$repo/os/$arch",
+                "https://mirror.ubrco.de/archlinux/$repo/os/$arch",
+                "https://mirror.sunred.org/archlinux/$repo/os/$arch",
+                "https://mirror.selfnet.de/archlinux/$repo/os/$arch",
+                "https://mirror.pseudoform.org/$repo/os/$arch",
+                "https://mirror.pagenotfound.de/archlinux/$repo/os/$arch",
+                "https://mirror.netcologne.de/archlinux/$repo/os/$arch",
+                "https://mirror.moson.org/arch/$repo/os/$arch",
+                "https://mirror.metalgamer.eu/archlinux/$repo/os/$arch",
+                "https://mirror.kumi.systems/archlinux/$repo/os/$arch"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "nm"
     },
     "no_pkg_lookups": false,
     "ntp": true,
     "offline": false,
     "packages": [
         "docker",
-        "git",
         "firefox",
-        "obsidian",
-        "telegram-desktop",
-        "tree"
+        "obsidian"
     ],
-    "parallel downlaods": 0,
-    "profile": {
-        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/desktop.py"
+    "parallel downloads": 2,
+    "profile_config": {
+        "gfx_driver": "Nvidia (proprietary)",
+        "greeter": "sddm",
+        "profile": {
+            "custom_settings": {
+                "KDE Plasma": {}
+            },
+            "details": [
+                "KDE Plasma"
+            ],
+            "main": "Desktop"
+        }
     },
     "script": "guided",
     "silent": false,
+    "skip_ntp": false,
+    "skip_version_check": false,
     "swap": true,
-    "sys-encoding": "utf-8",
-    "sys-language": "en_US",
-    "timezone": "Atlantic/Canary",
-    "version": "2.5.1"
+    "timezone": "UTC",
+    "uki": false,
+    "version": "2.8.1"
 }
