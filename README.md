@@ -8,19 +8,21 @@ To install a Linux distribution, you typically encounter the following component
 - Display server (Xorg / Wayland)
 - Package manager (Pacman, Apt, zypper, dnf)
 - Desktop environment (KDE, GNOME, XFCE), which includes components like the window manager, display manager, file manager, viewer, etc.
+- Ways to install: via CLI (text-based), via GUI (Calamares installer, debian-installer, ananconda, ubiquity, void-installer)
 
 Example of Linux distros:
 
-| Linux distro    | Linux kernel                   | Base system tools            | Bootloader      | Init system     | File system      | Display server | Package manager  | Desktop environment |
-|-----------------|--------------------------------|------------------------------|-----------------|-----------------|------------------|----------------|------------------|---------------------|
-| Arch Linux      | 6.8.1-arch1-1 (rolling-release)| archiso, base, base-devel    | GRUB, systemd   | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Pacman (PKGBUILD)| --                  |
-| Debian          | 5.17.12 (fixed-release)        | glibc                        | GRUB, systemd   | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Apt (.deb)       | --                  |
-| Fedora          | 5.19.12-200 (fixed-release)    | glibc                        | GRUB, systemd   | systemd         | EXT4, BTRFS      | Wayland        | DNF (.rpm)       | GNOME               |
-| NixOS           | 5.17.12 (rolling-release)      | glibc                        | systemd         | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | Nix (.nar)       | -- / GNOME          |
-| Gentoo          | 5.17.12 (rolling-release)      | glibc                        | GRUB, systemd   | OpenRC, systemd | EXT4, BTRFS, ZFS | Xorg / Wayland | Portage (.ebuild)| --                  |
-| Void Linux      | 6.3.12_1 (rolling-release)     | musl                         | GRUB            | runit           | EXT4, BTRFS      | Xorg / Wayland | xbps (.xbps)     | -- / XFCE           |
-| Ubuntu          | 5.17.12 (fixed-release)        | glibc                        | GRUB            | systemd         | EXT4             | Wayland        | Apt, snap (.snap)| GNOME               |
+Here's an improved and more detailed version of the table with added information on the installer types and desktop environments (DEs) for each Linux distribution:
 
+| Linux Distro    | Base System Tools                 | Bootloader          | Init System     | File System      | Display Server | Package Manager  | DE preinstalled  | Installer (Type)                          |
+|-----------------|-----------------------------------|---------------------|-----------------|------------------|----------------|------------------|------------------|-------------------------------------------|
+| Arch Linux      | linux + archiso, base, base-devel | GRUB / systemd-boot | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | pacman (PKGBUILD)| --               | Text-based CLI / archinstall (script CLI) |
+| Debian          | linux + glibc                     | GRUB                | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | apt (.deb)       | --               | Debian Installer (GUI and Text-based CLI) |
+| Fedora          | linux + glibc                     | GRUB                | systemd         | EXT4, BTRFS      | Wayland        | dnf (.rpm)       | GNOME, KDE       | Anaconda (GUI)                            |
+| NixOS           | linux + glibc                     | GRUB                | systemd         | EXT4, BTRFS, ZFS | Xorg / Wayland | nix (.nar)       | GNOME, KDE       | Text-based CLI / Calamares Installer GUI  |
+| Gentoo          | linux + glibc                     | GRUB / systemd-boot | OpenRC, systemd | EXT4, BTRFS, ZFS | Xorg / Wayland | portage (.ebuild)| --               | Text-based CLI                            |
+| Void Linux      | linux + musl                      | GRUB                | runit           | EXT4, BTRFS      | Xorg / Wayland | xbps (.xbps)     | --, XFCE         | Text-based CLI / Void-installer GUI       |
+| Ubuntu          | linux + glibc                     | GRUB                | systemd         | EXT4             | Wayland        | apt, snap (.snap)| GNOME            | Ubiquity GUI                              |
 
 ## 0. Prerequisites
 First you need to download the [ISO image](https://en.wikipedia.org/wiki/Optical_disc_image) of the Linux distribution that you want to install and write it to an optical medium like CD, DVD, pen-drive, HDD. 
@@ -36,56 +38,47 @@ mkfs.vfat /dev/sdb –I
 dd if=~/Downloads/arch.iso of=/dev/sdb bs=4M status=progress
 ```
 
-## 1. Options to install Arch Linux
-- 1.A. Install configured Linux distro (presaved config files) -> 🐧💾
-- 1.B. Install Linux fromt the terminal (typping on the shell) -> 🐧🐢
-- 1.C. Create your own Linux distro (base profile + calamares) -> 🐧🛠️🦑
+## 1. Options to install Linux
+- 1.A. Install configured Linux distro (presaved config files) -> 🐧 💾
+- 1.B. Install Linux fromt the terminal (typping on the shell) -> 🐧 🐢
+- 1.C. Create your own Linux distro (base profile + installer) -> 🐧 🛠️
 
-### 1.A. Install configured Arch-based distro
+### 1.A. Install base distro with KDE
 
-Download and install live-Isos based with a preconfigured desktop environment. You can desktops like KDE, GNOME, XFCE, etc or customized the parts of the desktop with Window Managers / Wayland compositors (awesomeWM, qtile, hyprland) + bar managers (waybar).
+- Arch-based with KDE:  [Garuda KDE Lite](https://iso.builds.garudalinux.org/iso/garuda/kde-lite/), [EndeavourOS](https://endeavouros.com/), [CachyOS KDE](https://mirror.cachyos.org/ISO/kde/), [ArcoLinux KDE](https://sourceforge.net/projects/arconetpro/files/arcoplasma/)
+- Debian-based with KDE: [KDE Neon](https://neon.kde.org/), [Kubuntu](https://kubuntu.org/getkubuntu/)
+- RPM-based with KDE: [Fedora KDE](https://ftp.plusline.net/fedora/linux/releases/39/Spins/x86_64/iso/Fedora-KDE-Live-x86_64-39-1.5.iso), [Nobara](https://nobara-images.nobaraproject.org/Nobara-39-Official-2024-01-24.iso), [openSUSE KDE](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-KDE-Live-x86_64-Current.iso)
 
-- Arch-based with KDE:  [Garuda KDE Lite](https://iso.builds.garudalinux.org/iso/garuda/kde-lite/), [EndeavourOS](https://endeavouros.com/latest-release/), [CachyOS KDE](https://mirror.cachyos.org/ISO/kde/)
+### 1.B. Installation from terminal
+Normally Linux is intalled via terminal typing and executing commands. Is the simplest ways to develop, but the most time consuming to the user.
 
-- Debian-based with KDE: [KDE Neon](https://neon.kde.org/), [Kubuntu](https://kubuntu.org/)
+Here are some examples of the installation guide of some Linux distro: [installation guide of the Arch Wiki](https://wiki.archlinux.org/title/Installation_guide), [installation guide of Gentoo wiki](https://wiki.gentoo.org/wiki/Installation), [installation guide of the NixOS wiki](https://nixos.wiki/wiki/NixOS_Installation_Guide)
 
-- RPM-based with KDE: [Fedora KDE](https://ftp.plusline.net/fedora/linux/releases/39/Spins/x86_64/iso/Fedora-KDE-Live-x86_64-39-1.5.iso), [Nobara Project](https://nobara-images.nobaraproject.org/Nobara-39-Official-2024-01-24.iso.sha256sum), [openSUSE KDE](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-KDE-Live-x86_64-Current.iso)
+Typically you need to do pre-installation (internet connection, partition and mount disks), install essential packages, configure system (fstam, chroot, timezone, localizaion, network, intramfs, root password) and reboot.
 
-> You also can use [ArcoLinux-D (Decision)](https://ftp.belnet.be/arcolinux/iso/v23.01.03/arcolinuxd-v23.01.03-x86_64.iso) an Arch-based distro where you can decide which packages to install with a GUI [calamares installer](https://calamares.io/)
+To automate the installation process we can create an use scripts on the terminal using BASH. 
 
-### 1.B. Installation from Arch Linux terminal
-There are various options to install Arch Linux with this configuration system:
-
-#### 1.B.A. Shell mode: Arch in the shell
-Install Arch Linux manually typing commands following the [Arch Wiki](https://wiki.archlinux.org/title/Installation_guide). You have to make pre-installation (internet connection, partition  and mount disks), install essential packages, configure system (fstam, chroot, timezone, localizaion, network, intramfs, root password) and reboot.
-
-#### 1.B.B. Scripting mode: burn as a shell (BASH)
-> **Warning** Modify the script installation [arksys-installation.sh](installation/archinstall/archisntall-config.sh) and execute with your consent. (Send feedback if you know how to improve it)
-
-#### 1.B.C. CLI mode: archinstall
-When you boot into Arch, you can run "archinstall" an installer with forms options. Watch this video installing Arch with archinstall in less than 5 mins:
+- You can use scripts created by the community like **archinstall** a script installer for Arch Linux with selection options in a formulary. Watch this video installing Arch in less than 5 mins:
 [![Watch the video](/img/archinstall-video.png)](https://www.youtube-nocookie.com/embed/8mEjwn_AjuQ?start=146)
  
-You can also use archinstall with preconfigured options stored in local or remote json `archinstall --config <path-to-json> --disk-layout <path-to-json> --creds <path-to-json>'.
+You can specify preconfigured options stored in a json to the archinstall command, `archinstall --config <path-to-json> --disk-layout <path-to-json> --creds <path-to-json>'. Example to install Arch with KDE, ext4 file system and extra pks.
 
+Install locally with git:
 ```sh
-# locally with
 sudo pacman -S git
 git clone https://github.com/arksys-os/arksys-basic-install.git
 cd ~/arksys-basic-install/installation/archinstall && sh archinstall-config.sh
-
-# remote with curl
-curl -sL https://raw.githubusercontent.com/arksys-os/arksys_basic-install/main/installation/script/arksys.sh | bash
-
-# remote with git
-sudo pacman -S git
-git clone https://github.com/arksys-os/arksys-basic-installation.git
-cd ~/arksys-basic-installation/installation/script/ && sh arksys.sh
 ```
 
-### C. Distro mode: Create you own Arch-based distro
-Create your own Linux distro with a framework installer like calamares installer. You need to configure the base profile [archiso](https://wiki.archlinux.org/title/Archiso) profile for Archlinux or for Debian with [Debian live-build](https://salsa.debian.org/live-team/live-build) and configure the graphical installer with [calamares installer](https://calamares.io/). 
+Install remottely with curl:
+```sh
+curl -sL https://raw.githubusercontent.com/arksys-os/arksys_basic-install/main/installation/script/arksys.sh | bash
+```
 
+- Or you can create you own scripts. Here's an example I've made to install automatize the Arch Linux installation, check [arksys.sh](installation/script/arksys.sh)
+
+### C. Distro mode: Create you own Linux distro
+Create your own Linux distro with a framework installer. You need to configure the base profile for Arch Linux ([archiso](https://wiki.archlinux.org/title/Archiso) profile), for Debian with [Debian live-build](https://salsa.debian.org/live-team/live-build) and configure a graphical installer like [calamares installer](https://calamares.io/). 
 
 ## 2. [Post-installation](https://github.com/arksys-os/arksys_post-install)
 Continue reading on [ArkSys-OS/Post-installation](https://github.com/arksys-os/arksys_post-install).
